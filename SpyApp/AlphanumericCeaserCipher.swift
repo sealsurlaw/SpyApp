@@ -3,7 +3,9 @@ import Foundation
 struct AlphanumericCeaserCipher : Cipher {
     func encode(_ plaintext: String, secret: String) -> String? {
         var encoded = ""
-        let shiftBy = UInt32(secret)!
+        guard let shiftBy = UInt32(secret) else {
+            return nil
+        }
         
         for character in plaintext.uppercased() {
             let unicode = character.unicodeScalars.first!.value
@@ -25,7 +27,9 @@ struct AlphanumericCeaserCipher : Cipher {
     
     func decrypt(_ encrypted: String, secret: String) -> String? {
         var decoded = ""
-        let shiftBy = UInt32(secret)!
+        guard let shiftBy = UInt32(secret) else {
+            return nil
+        }
         
         for character in encrypted.uppercased() {
             let unicode = character.unicodeScalars.first!.value

@@ -45,6 +45,7 @@ class SpyAppViewController: UIViewController {
         }
         if let decoded = cipher.decrypt(plaintext, secret: secretText) {
             output.text = decoded
+            UIPasteboard.general.string = output.text
         } else {
             output.text = "Error decoding"
         }

@@ -21,5 +21,15 @@ class CeasarCipherTests: XCTestCase {
         let result = cipher.encode("anyString", secret: "a")
         XCTAssertNil(result)
     }
+    
+    func test_negativeSecret() {
+        let result = cipher.encode("anyString", secret: "-1")
+        XCTAssertNil(result)
+    }
+    
+    func test_regularShift() {
+        let result = cipher.encode("anyString", secret: "1")
+        XCTAssertEqual(result, "bozTusjoh")
+    }
 
 }

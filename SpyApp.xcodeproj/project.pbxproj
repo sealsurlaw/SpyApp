@@ -22,6 +22,7 @@
 		C04D20C6214ECF5900ADCF09 /* BaconCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D20C5214ECF5900ADCF09 /* BaconCipher.swift */; };
 		C04D20C8214EDD9F00ADCF09 /* BaconCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D20C7214EDD9F00ADCF09 /* BaconCipherTests.swift */; };
 		C0E6AC94214B5C3A00D25673 /* CeasarCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E6AC93214B5C3A00D25673 /* CeasarCipherTests.swift */; };
+		C0FAE9002154328800635969 /* AlphanumericCeaserCipherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FAE8FF2154328800635969 /* AlphanumericCeaserCipherTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C04D20C5214ECF5900ADCF09 /* BaconCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaconCipher.swift; sourceTree = "<group>"; };
 		C04D20C7214EDD9F00ADCF09 /* BaconCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaconCipherTests.swift; sourceTree = "<group>"; };
 		C0E6AC93214B5C3A00D25673 /* CeasarCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeasarCipherTests.swift; sourceTree = "<group>"; };
+		C0FAE8FF2154328800635969 /* AlphanumericCeaserCipherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphanumericCeaserCipherTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				C04D20C1214EB4BB00ADCF09 /* RailFenceCipherTests.swift */,
 				C04D20C7214EDD9F00ADCF09 /* BaconCipherTests.swift */,
 				970E4DEB2138EC8700BA3EE9 /* Info.plist */,
+				C0FAE8FF2154328800635969 /* AlphanumericCeaserCipherTest.swift */,
 			);
 			path = SpyAppTests;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				970E4DEA2138EC8700BA3EE9 /* SpyAppTests.swift in Sources */,
 				C0E6AC94214B5C3A00D25673 /* CeasarCipherTests.swift in Sources */,
 				C04D20C8214EDD9F00ADCF09 /* BaconCipherTests.swift in Sources */,
+				C0FAE9002154328800635969 /* AlphanumericCeaserCipherTest.swift in Sources */,
 				C04D20C2214EB4BB00ADCF09 /* RailFenceCipherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
