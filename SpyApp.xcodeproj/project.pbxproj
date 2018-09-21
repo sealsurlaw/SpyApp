@@ -118,10 +118,10 @@
 			children = (
 				970E4DE92138EC8700BA3EE9 /* SpyAppTests.swift */,
 				C0E6AC93214B5C3A00D25673 /* CeasarCipherTests.swift */,
+				C0FAE8FF2154328800635969 /* AlphanumericCeaserCipherTest.swift */,
 				C04D20C1214EB4BB00ADCF09 /* RailFenceCipherTests.swift */,
 				C04D20C7214EDD9F00ADCF09 /* BaconCipherTests.swift */,
 				970E4DEB2138EC8700BA3EE9 /* Info.plist */,
-				C0FAE8FF2154328800635969 /* AlphanumericCeaserCipherTest.swift */,
 			);
 			path = SpyAppTests;
 			sourceTree = "<group>";

@@ -42,11 +42,6 @@ class AlphanumericCeasarCipherTests: XCTestCase {
         XCTAssertEqual(result, "1ABC")
     }
     
-    func test_largeJumpAcrossLettersFromEnd() {
-        let result = cipher.encode("az", secret: "11")
-        XCTAssertEqual(result, "LA")
-    }
-    
     func test_decryptOneStringGetsMappedToSelfWith_0_secret() {
         let plaintext = "test"
         
@@ -77,11 +72,6 @@ class AlphanumericCeasarCipherTests: XCTestCase {
     func test_decryptJumpFromNumbersToLetters() {
         let result = cipher.decrypt("19ab", secret: "1")
         XCTAssertEqual(result, "089A")
-    }
-    
-    func test_decryptLargeJumpAcrossLettersFromEnd() {
-        let result = cipher.decrypt("az", secret: "11")
-        XCTAssertEqual(result, "ZO")
     }
     
 }

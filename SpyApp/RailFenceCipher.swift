@@ -4,11 +4,11 @@ import Foundation
     The Rail Fence Cipher takes a phrase and breaks it up into multiple rails
     before gluing it all back together
  "HelloThereBuddy" with 4 rails would give:
-        1: H - - - - - h - - - - - d - -  hhd
-        2: - e - - - T - e - - - u - d -  eteud
-        3: - - l - o - - - r - B - - - y  lorby
-        4: - - - l - - - - - e - - - - -  le
- result: hhdeteudlorbyle
+     1: H - - - o - - - r - - - d - -  hord
+     2: - e - - - T - - - e - - - d -  eted
+     3: - - l - - - h - - - B - - - y  lhby
+     4: - - - l - - - e - - - u - - -  leu
+ result: hordetedlhbyleu
 */
 struct RailFenceCipher : Cipher {
     
@@ -30,16 +30,12 @@ struct RailFenceCipher : Cipher {
         
         // Add the characters to each rail
         var currRail = 0
-        var direction = 1
         for char in plaintext.lowercased() {
             rails[currRail].append(String(char))
-            if currRail == (numRails - 1) {
-                direction = -1
+            currRail += 1
+            if currRail == (numRails) {
+                currRail = 0
             }
-            else if currRail == 0 {
-                direction = 1
-            }
-            currRail += direction
         }
         
         // Glue rails together
@@ -56,21 +52,34 @@ struct RailFenceCipher : Cipher {
         guard let numRails = Int(secret) else {
             return nil
         }
-        // Check that the number of rails isn't 0 or negative
-        if numRails <= 0 {
+        // Check that the number of rails isn't 1, 0 or negative
+        if numRails <= 1 {
             return nil
         }
-        
         var rails = [String]()
         
         // Build the rails
         for _ in 0..<numRails {
             rails.append(String())
         }
-
         
+        // Add the characters to each rail
+        var currRail = 0
+        for char in plaintext.lowercased() {
+            rails[currRail].append(String(char))
+            currRail += 1
+            if currRail == (numRails) {
+                currRail = 0
+            }
+        }
         
-        return nil
+        // Glue rails together
+        var decrypted: String = ""
+        for part in rails {
+            decrypted += part
+        }
+        
+        return decrypted
     }
     
 }

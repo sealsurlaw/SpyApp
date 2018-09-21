@@ -1,6 +1,17 @@
 import Foundation
 
-struct BaconCipher : Cipher {
+
+/*
+    The Bacon Cipher takes a letter and encodes it using a binary
+    pattern of A's and B's
+    e.g.
+    test = BAABB AABAA BAABA BAABB
+             t     e     s     t
+ 
+    The secret inserts randomized A's and B's between characters
+    of equal to the number of the secret key.
+ */
+struct BaconCipher : Cipher {    
     
     let translations = [
         "a": "AAAAA",

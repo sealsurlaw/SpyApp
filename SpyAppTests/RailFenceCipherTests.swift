@@ -13,7 +13,7 @@ class RailFenceCipherTests: XCTestCase {
     func test_generalTest() {
         let encrypted = cipher.encode("HelloThereBuddy", secret: "4")!
         
-        XCTAssertEqual(encrypted, "hhdeteudlorbyle")
+        XCTAssertEqual(encrypted, "hordetedlhbyleu")
         
     }
     
